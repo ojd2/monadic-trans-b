@@ -14,7 +14,7 @@
 
 -- For example, below highlights a small interpreter for a simple programming language.
 
-module main where
+module Main where
 
 import Control.Monad.Identity
 import Control.Monad.Except
