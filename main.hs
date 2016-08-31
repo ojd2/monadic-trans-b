@@ -83,7 +83,7 @@ exExp = Literal 42 `Plus`(App(Lambda "x" (Var "x"))(Literal 6 `Plus` Literal 10)
 -- parse0 Map.empty exExp' -> IntVal 5
 exExp' = Literal 20 `Sub` (App(Lambda "i" (Var "i"))(Literal 10 `Plus` Literal 5)) 
 
--- However, this all well and good but Monad Transformers can offer more control and flexibility when
+-- However, this is all well and good but Monad Transformers can offer more control and flexibility when
 -- it comes to interpreters thanks to Monadic operations using 'do' notation.
 
 -- First define a new evaluation function using Monadic operation.
