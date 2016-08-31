@@ -87,7 +87,7 @@ exExp' = Literal 20 `Sub` (App(Lambda "i" (Var "i"))(Literal 10 `Plus` Literal 5
 -- it comes to interpreters thanks to Monadic operations using 'do' notation.
 
 -- First define a new evaluation function using Monadic operation.
--- Create a Type Synonym as Eval' ά -> Identity ά. 'Identity' is a Monad being imported from our 
+-- Create a Type Synonym as Eval' expr -> Identity expr. 'Identity' is a Monad being imported from our 
 --declaration above 'Control.Monad.Identity' that constructs return operations for all procedures in 
 -- the Monad. The 'RunIdentity' function is used to do just that.
 
@@ -97,7 +97,7 @@ type Eval' expr = Identity expr
 runEval' :: Eval' expr -> expr
 runEval' ev     =  runIdentity ev
 
--- Assuming the Eval1 ά Monad assignment to 'Identity' is in place, the 'parse'' function can be 
+-- Assuming the Eval1 expr Monad assignment to 'Identity' is in place, the 'parse'' function can be 
 -- reimposed as using 'do' notation and returning '$' functions specifying a result.
 
 eval' :: Env -> Exp -> Eval' Value
