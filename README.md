@@ -10,7 +10,7 @@
 
 Simple parser interpreter for a small language that covers one or two Monad Transformers. Not every transformer has been implement. Further additions will be made over due course. 
 
-For more information visit the Haskell Documentation online.
+For more information visit the Haskell Documentation online and follow the instructions listed.
 
 ```
 Copyright © 2016 ojd2
